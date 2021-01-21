@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<JavaCallout async="false" continueOnError="false" enabled="true" name="JC-PEM-Decode">
+    <DisplayName>JC-PEM-Decode</DisplayName>
+    <Properties>
+        <Property name="pem-string">{request.header.pem}</Property>
+    </Properties>
+    <ClassName>com.google.apigee.edgecallouts.PEMDecode</ClassName>
+    <ResourceURL>java://original-edge-callout-pemdecode.jar</ResourceURL>
+</JavaCallout>

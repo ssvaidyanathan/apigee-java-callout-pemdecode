@@ -90,19 +90,17 @@ public class PEMDecode implements Execution {
 
 
   public static void main(String args[]) throws IOException, CertificateEncodingException, NoSuchAlgorithmException {
-    //String pem = new String(Files.readAllBytes(Paths.get("/Users/miguelmendoza/Downloads/example_zso/device_user.pem")));
-    String pem = new String(Files.readAllBytes(Paths.get("/Users/miguelmendoza/Downloads/test.pem")));
-
-    Map<String, String> parts = decodePEM(pem);
+    String pem = new String(Files.readAllBytes(Paths.get("/Users/miguelmendoza/Downloads/example_zso/device_user.pem")));
+	Map<String, String> parts = decodePEM(pem);
     for (Map.Entry<String, String> part: parts.entrySet()) {
       System.out.println(part.getKey() + ": " + part.getValue());
     }
   }
 
   public static Map<String, String> decodePEM(String content) throws IOException, NoSuchAlgorithmException, CertificateEncodingException {
-
+	String contentStr=content.replace("\\n", "\n");
     Map<String, String> parts = new TreeMap<>();
-    X509Certificate cert = X509CertUtils.parse(content);
+    X509Certificate cert = X509CertUtils.parse(contentStr);
 
     parts.put("issuerDN", cert.getIssuerDN().toString());
     parts.put("subjectDN", cert.getSubjectDN().toString());
