@@ -26,7 +26,7 @@ Preparation, first time only: `./buildsetup.sh`
 
 #### To build: 
 - Go to the `callout` directory
-- Execute `mvn clean package`. This should create a jar called "edge-callout-pemdecode" and also create a copy in `../bundle/apiproxy/resources/java` directory
+- Execute `mvn clean package`. This should create a jar called "original-edge-callout-pemdecode.jar" and also create a copy in `../bundle/apiproxy/resources/java` directory
 
 
 ### Deploy Apigee proxy
