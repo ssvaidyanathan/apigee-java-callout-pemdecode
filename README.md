@@ -32,15 +32,13 @@ Preparation, first time only: `./buildsetup.sh`
 ### Deploy Apigee proxy
 - Go to the `bundle` directory
 - For SaaS/OPDK: Execute `mvn clean install -P{profile} -Dorg={org} -Dusername={username} -Dpassword={password} -f pom.xml`
-- For hybrid: Execute `mvn clean install -Phybrid -Dorg={org} -Denv={env} -Dfile={file} -f pom-hybrid.xml`
-
-where 
-> `{profile}` is the Maven profile
-> `{org}` is your Apigee organization
-> `{env}` is your Apigee environment
-> `{username}` is your Apigee username
-> `{password}` is your Apigee password
-> `{file}` is the path of your service account
+- For hybrid: Execute `mvn clean install -Phybrid -Dorg={org} -Denv={env} -Dfile={file} -f pom-hybrid.xml` where 
+  - `{profile}` is the Maven profile
+  - `{org}` is your Apigee organization
+  - `{env}` is your Apigee environment
+  - `{username}` is your Apigee username
+  - `{password}` is your Apigee password
+  - `{file}` is the path of your service account
 
 - The above command should deploy the proxy as `apigee-pem-decode`. 
 - To test, run the following curl
