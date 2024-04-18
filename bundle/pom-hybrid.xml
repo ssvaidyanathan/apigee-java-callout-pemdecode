@@ -70,7 +70,7 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <overwrite>true</overwrite>
+                            <overwrite>false</overwrite>
                             <encoding>UTF-8</encoding>
                              <echo message="basedir parent : ${basedir}"/>
                             <outputDirectory>${basedir}/target/apiproxy</outputDirectory>
